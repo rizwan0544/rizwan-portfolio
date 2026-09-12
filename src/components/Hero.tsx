@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Icon from "@/components/Icon";
-import DeveloperIllustration from "@/components/DeveloperIllustration";
 import { colorAt } from "@/lib/colors";
 import { profile, heroTech, heroTechCard, heroHighlights } from "@/lib/data";
 
@@ -52,7 +52,16 @@ export default function Hero() {
               </p>
             </div>
 
-            <DeveloperIllustration className="w-4/5 mx-auto" />
+            <div className="relative h-72 w-72 md:h-80 md:w-80 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
+              <Image
+                src={profile.photo}
+                alt={profile.name}
+                fill
+                sizes="320px"
+                className="object-cover"
+                priority
+              />
+            </div>
 
             <div className="absolute bottom-0 right-0 md:-right-6 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
               <p className="text-xs font-bold text-foreground/60 mb-3">Technologies I Use</p>
