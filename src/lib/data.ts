@@ -41,6 +41,36 @@ export const skillGroups = [
   },
 ];
 
+export const topSkills = [
+  { name: "PHP & Laravel", percent: 95 },
+  { name: "React.js & Vue.js", percent: 88 },
+  { name: "Node.js & APIs", percent: 85 },
+  { name: "MySQL & Databases", percent: 90 },
+];
+
+export const expertise = [
+  {
+    title: "Backend Development",
+    description: "Scalable REST APIs and backend architecture using PHP, Laravel, and Node.js/Express.",
+    icon: "server",
+  },
+  {
+    title: "Frontend Engineering",
+    description: "Interactive, modern UIs with React.js, Vue.js, Next.js, and Inertia.js.",
+    icon: "layout",
+  },
+  {
+    title: "3rd-Party Integrations",
+    description: "WhatsApp Meta, Google Gemini AI, Stripe, Google Calendar, and Microsoft Graph API.",
+    icon: "plug",
+  },
+  {
+    title: "Databases & Cloud",
+    description: "MySQL, MongoDB, PostgreSQL, Supabase, and Amazon S3 for high-volume storage.",
+    icon: "database",
+  },
+];
+
 export const experience = [
   {
     company: "14Digital",
@@ -126,7 +156,7 @@ export const interests = [
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "Services", href: "#expertise" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },

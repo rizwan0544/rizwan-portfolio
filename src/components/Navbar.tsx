@@ -7,9 +7,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <a href="#home" className="text-white font-bold text-lg tracking-tight">
+        <a href="#home" className="text-navy font-extrabold text-lg tracking-tight">
           Rizwan<span className="text-accent">.</span>
         </a>
 
@@ -18,7 +18,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-slate-300 hover:text-white transition-colors"
+                className="text-sm font-medium text-navy/70 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
@@ -28,13 +28,13 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden md:inline-block rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white hover:bg-accent-light transition-colors"
+          className="hidden md:inline-block rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-accent/30 hover:bg-accent-dark transition-colors"
         >
-          Hire Me
+          Contact
         </a>
 
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-navy"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -45,13 +45,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-navy-light border-t border-white/5 px-6 py-4">
+        <div className="md:hidden bg-white border-t border-black/5 px-6 py-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-slate-200 hover:text-white text-sm"
+                  className="text-navy/80 hover:text-primary text-sm font-medium"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -61,10 +61,10 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="inline-block rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white"
+                className="inline-block rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white"
                 onClick={() => setOpen(false)}
               >
-                Hire Me
+                Contact
               </a>
             </li>
           </ul>
