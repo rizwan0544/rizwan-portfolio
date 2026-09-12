@@ -1,5 +1,6 @@
 import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
+import { colorAt } from "@/lib/colors";
 import { helpBlocks } from "@/lib/data";
 
 export default function HowICanHelp() {
@@ -14,9 +15,9 @@ export default function HowICanHelp() {
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {helpBlocks.map((block) => (
+          {helpBlocks.map((block, i) => (
             <div key={block.title} className="card-hover rounded-2xl border border-border bg-soft p-6 text-center">
-              <span className="mx-auto h-12 w-12 rounded-xl bg-white border border-border text-primary flex items-center justify-center mb-4">
+              <span className={`mx-auto h-12 w-12 rounded-xl flex items-center justify-center mb-4 ${colorAt(i)}`}>
                 <Icon name={block.icon} className="h-6 w-6" />
               </span>
               <h3 className="font-bold text-foreground mb-2">{block.title}</h3>

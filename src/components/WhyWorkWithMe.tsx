@@ -1,5 +1,6 @@
 import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
+import { colorAt } from "@/lib/colors";
 import { whyWorkWithMe } from "@/lib/data";
 
 export default function WhyWorkWithMe() {
@@ -14,9 +15,9 @@ export default function WhyWorkWithMe() {
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {whyWorkWithMe.map((item) => (
+          {whyWorkWithMe.map((item, i) => (
             <div key={item.title} className="card-hover rounded-2xl border border-border bg-soft p-6">
-              <span className="h-11 w-11 rounded-xl bg-white border border-border text-primary flex items-center justify-center mb-4">
+              <span className={`h-11 w-11 rounded-xl flex items-center justify-center mb-4 ${colorAt(i + 6)}`}>
                 <Icon name={item.icon} className="h-5 w-5" />
               </span>
               <h3 className="font-bold text-foreground mb-2">{item.title}</h3>

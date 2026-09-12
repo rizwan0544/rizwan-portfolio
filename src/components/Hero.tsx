@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Icon from "@/components/Icon";
+import DeveloperIllustration from "@/components/DeveloperIllustration";
+import { colorAt } from "@/lib/colors";
 import { profile, heroTech, heroTechCard, heroHighlights } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full bg-soft pt-32 pb-20 md:pt-40 md:pb-24">
+    <section id="home" className="relative w-full bg-soft pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
@@ -44,41 +45,40 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative flex justify-center md:justify-end">
-            <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-3xl overflow-hidden bg-white shadow-xl border border-border">
-              <Image
-                src={profile.photo}
-                alt={profile.name}
-                fill
-                sizes="320px"
-                className="object-cover"
-                priority
-              />
+          <div className="relative mx-auto md:mx-0 md:ml-auto w-full max-w-md min-h-[420px]">
+            <div className="absolute -top-4 left-0 md:-left-4 z-10 rounded-2xl bg-white shadow-lg border border-border px-4 py-3 max-w-[190px]">
+              <p className="text-xs font-bold text-foreground leading-snug">
+                Turning Ideas into Digital Solutions
+              </p>
             </div>
 
-            <div className="absolute -bottom-8 md:-bottom-10 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
-              <p className="text-xs font-bold text-foreground/60 mb-2">Core Stack</p>
-              <div className="flex flex-wrap gap-1.5">
-                {heroTechCard.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md bg-lavender text-primary text-[11px] font-semibold px-2 py-1"
-                  >
-                    {tech}
-                  </span>
+            <DeveloperIllustration className="w-4/5 mx-auto" />
+
+            <div className="absolute bottom-0 right-0 md:-right-6 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
+              <p className="text-xs font-bold text-foreground/60 mb-3">Technologies I Use</p>
+              <div className="grid grid-cols-2 gap-2">
+                {heroTechCard.map((tech, i) => (
+                  <div key={tech.name} className="flex items-center gap-1.5">
+                    <span className={`h-6 w-6 shrink-0 rounded-md flex items-center justify-center ${colorAt(i)}`}>
+                      <Icon name={tech.icon} className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-[11px] font-semibold text-foreground/80 truncate">
+                      {tech.name}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-20 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {heroHighlights.map((item) => (
+        <div className="mt-24 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {heroHighlights.map((item, i) => (
             <div
               key={item.title}
               className="flex items-center gap-3 rounded-xl bg-white border border-border p-4"
             >
-              <span className="h-9 w-9 shrink-0 rounded-lg bg-lavender text-primary flex items-center justify-center">
+              <span className={`h-9 w-9 shrink-0 rounded-lg flex items-center justify-center ${colorAt(i)}`}>
                 <Icon name={item.icon} className="h-5 w-5" />
               </span>
               <span className="text-sm font-semibold text-foreground">{item.title}</span>

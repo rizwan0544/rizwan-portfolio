@@ -1,4 +1,6 @@
+import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
+import { colorAt } from "@/lib/colors";
 import { techStack } from "@/lib/data";
 
 export default function TechStack() {
@@ -13,9 +15,14 @@ export default function TechStack() {
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techStack.map((group) => (
+          {techStack.map((group, i) => (
             <div key={group.category} className="rounded-2xl border border-border bg-soft p-6">
-              <h3 className="font-bold text-foreground mb-4">{group.category}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <span className={`h-9 w-9 rounded-lg flex items-center justify-center ${colorAt(i)}`}>
+                  <Icon name={group.icon} className="h-4 w-4" />
+                </span>
+                <h3 className="font-bold text-foreground">{group.category}</h3>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span

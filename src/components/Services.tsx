@@ -1,5 +1,6 @@
 import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
+import { colorAt } from "@/lib/colors";
 import { services } from "@/lib/data";
 
 export default function Services() {
@@ -14,12 +15,12 @@ export default function Services() {
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
+          {services.map((service, i) => (
             <div
               key={service.title}
               className="card-hover rounded-2xl border border-border bg-white p-6"
             >
-              <span className="h-11 w-11 rounded-xl bg-lavender text-primary flex items-center justify-center mb-4">
+              <span className={`h-11 w-11 rounded-xl flex items-center justify-center mb-4 ${colorAt(i)}`}>
                 <Icon name={service.icon} className="h-5 w-5" />
               </span>
               <h3 className="font-bold text-foreground mb-2">{service.title}</h3>

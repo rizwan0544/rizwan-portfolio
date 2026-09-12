@@ -8,7 +8,6 @@ import WhyWorkWithMe from "@/components/WhyWorkWithMe";
 import HowICanHelp from "@/components/HowICanHelp";
 import Process from "@/components/Process";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -26,7 +25,6 @@ export default function Home() {
         <HowICanHelp />
         <Process />
         <About />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

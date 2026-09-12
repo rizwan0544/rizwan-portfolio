@@ -6,7 +6,6 @@ export const profile = {
   availability: "Available for new projects",
   linkedin: "https://linkedin.com/in/dev-rizwan-akram",
   linkedinLabel: "linkedin.com/in/dev-rizwan-akram",
-  photo: "/profile.png",
 };
 
 export const heroTech = [
@@ -27,7 +26,18 @@ export const heroTech = [
   "n8n Automation",
 ];
 
-export const heroTechCard = ["PHP", "Laravel", "React", "Vue", "Node.js", "MySQL", "REST APIs", "AI Automation"];
+export const heroTechCard = [
+  { name: "PHP", icon: "code" },
+  { name: "Laravel", icon: "layers" },
+  { name: "React", icon: "code" },
+  { name: "Vue", icon: "layers" },
+  { name: "Node.js", icon: "code" },
+  { name: "MySQL", icon: "dashboard" },
+  { name: "REST APIs", icon: "plug" },
+  { name: "AI Automation", icon: "automation" },
+  { name: "WhatsApp", icon: "chat" },
+  { name: "n8n", icon: "workflow" },
+];
 
 export const heroHighlights = [
   { title: "Web Application Development", icon: "code" },
@@ -105,31 +115,37 @@ export const solutions = [
     title: "CRM Solutions",
     problem: "Losing track of leads, customers and follow-ups across spreadsheets and inboxes.",
     solution: "A custom CRM that centralizes customer data, pipelines and communication in one place.",
+    icon: "crm",
   },
   {
     title: "HRM & Recruitment",
     problem: "Manual hiring, attendance and payroll processes that slow your HR team down.",
     solution: "An HRM platform that automates recruitment, attendance, and workforce reporting.",
+    icon: "users",
   },
   {
     title: "AI Automation",
     problem: "Repetitive tasks like CV screening or customer replies eating up your team's time.",
     solution: "AI-powered workflows that handle parsing, conversations and decisions automatically.",
+    icon: "automation",
   },
   {
     title: "Business Dashboards",
     problem: "Decisions made without clear visibility into operations, sales or finances.",
     solution: "Real-time dashboards that turn raw data into reports leadership can act on.",
+    icon: "dashboard",
   },
   {
     title: "E-commerce Platforms",
     problem: "Needing a reliable online store that handles products, payments and inventory.",
     solution: "A custom e-commerce platform built to your catalogue, pricing and fulfillment needs.",
+    icon: "cart",
   },
   {
     title: "Custom Business Software",
     problem: "Off-the-shelf tools that don't fit how your business actually operates.",
     solution: "Purpose-built software designed around your exact workflows and requirements.",
+    icon: "build",
   },
 ];
 
@@ -137,26 +153,32 @@ export const techStack = [
   {
     category: "Backend",
     items: ["PHP", "Laravel", "Node.js", "Express.js"],
+    icon: "code",
   },
   {
     category: "Frontend",
     items: ["React.js", "Vue.js", "Next.js", "Inertia.js", "JavaScript", "HTML", "CSS"],
+    icon: "layers",
   },
   {
     category: "Databases",
     items: ["MySQL", "PostgreSQL", "MongoDB"],
+    icon: "dashboard",
   },
   {
     category: "APIs & Integrations",
     items: ["REST APIs", "Webhooks", "Third-Party APIs", "Payment APIs", "Google APIs", "WhatsApp APIs"],
+    icon: "link",
   },
   {
     category: "AI & Automation",
     items: ["AI Integrations", "OpenAI", "Gemini", "n8n", "AI-Powered Workflows", "WhatsApp AI Automation"],
+    icon: "automation",
   },
   {
     category: "Other",
     items: ["WordPress", "Excel Add-ins", "Git", "CI/CD", "AWS / S3"],
+    icon: "wrench",
   },
 ];
 
@@ -255,8 +277,6 @@ export const process = [
   { step: "03", title: "Build", description: "Develop, integrate, test and refine the product." },
   { step: "04", title: "Launch & Support", description: "Deploy the solution and provide ongoing improvements and support." },
 ];
-
-export const testimonials: { quote: string; name: string; role: string }[] = [];
 
 export const projectTypes = [
   "Web Application",
