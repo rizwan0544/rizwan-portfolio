@@ -21,12 +21,22 @@ const paths: Record<string, string> = {
   pin: "M12 21s7-6.5 7-11.5A7 7 0 105 9.5C5 14.5 12 21 12 21zM12 12a2.5 2.5 0 100-5 2.5 2.5 0 000 5z",
   clock: "M12 22a10 10 0 100-20 10 10 0 000 20zM12 6v6l4 2",
   arrowRight: "M5 12h14M13 6l6 6-6 6",
+  star: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+  check: "M20 6L9 17l-5-5",
 };
 
-export default function Icon({ name, className = "h-6 w-6" }: { name: string; className?: string }) {
+export default function Icon({
+  name,
+  className = "h-6 w-6",
+  strokeWidth = 1.8,
+}: {
+  name: string;
+  className?: string;
+  strokeWidth?: number;
+}) {
   const d = paths[name] ?? paths.code;
   return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg viewBox="0 0 24 24" fill="none" className={className} stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
       <path d={d} />
     </svg>
   );

@@ -7,6 +7,8 @@ import TechStack from "@/components/TechStack";
 import WhyWorkWithMe from "@/components/WhyWorkWithMe";
 import HowICanHelp from "@/components/HowICanHelp";
 import Process from "@/components/Process";
+import Testimonials from "@/components/Testimonials";
+import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -24,6 +26,8 @@ export default function Home() {
         <WhyWorkWithMe />
         <HowICanHelp />
         <Process />
+        <Testimonials />
+        <Pricing />
         <About />
         <Contact />
       </main>

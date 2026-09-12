@@ -279,6 +279,66 @@ export const process = [
   { step: "04", title: "Launch & Support", description: "Deploy the solution and provide ongoing improvements and support." },
 ];
 
+export const testimonials = [
+  {
+    quote:
+      "Rizwan rebuilt our booking platform from the ground up and automated half of what our team used to do by hand. Communication was clear from day one.",
+    name: "Sample Client",
+    role: "Operations Lead, Care & Services Business",
+  },
+  {
+    quote:
+      "The CRM he built centralized our leads and follow-ups into one dashboard. It's exactly what off-the-shelf tools couldn't give us.",
+    name: "Sample Client",
+    role: "Founder, Recruitment Platform",
+  },
+  {
+    quote:
+      "AI automation cut our response time from hours to minutes. Rizwan understood the business problem, not just the code.",
+    name: "Sample Client",
+    role: "Product Manager, SaaS Startup",
+  },
+];
+
+export const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$800+",
+    period: "per project",
+    description: "Small websites, landing pages and single-feature builds.",
+    features: ["Responsive website or feature build", "Up to 2 revision rounds", "Basic API integration", "2 weeks support after launch"],
+    highlighted: false,
+  },
+  {
+    name: "Growth",
+    price: "$2,500+",
+    period: "per project",
+    description: "Full web apps, CRMs and multi-feature business platforms.",
+    features: [
+      "Custom web application or CRM",
+      "API & third-party integrations",
+      "AI or WhatsApp automation",
+      "Admin dashboard & reporting",
+      "30 days support after launch",
+    ],
+    highlighted: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "scoped to needs",
+    description: "Large platforms, ongoing development and long-term partnerships.",
+    features: [
+      "End-to-end product development",
+      "Dedicated ongoing support",
+      "Complex automations & integrations",
+      "Scalable architecture & performance tuning",
+      "Priority turnaround",
+    ],
+    highlighted: false,
+  },
+];
+
 export const projectTypes = [
   "Web Application",
   "CRM System",
