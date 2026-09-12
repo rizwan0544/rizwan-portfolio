@@ -45,25 +45,25 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto md:mx-0 md:ml-auto w-full max-w-md min-h-[420px]">
+          <div className="relative mx-auto md:mx-0 md:ml-auto w-full max-w-sm min-h-[460px]">
             <div className="absolute -top-4 left-0 md:-left-4 z-10 rounded-2xl bg-white shadow-lg border border-border px-4 py-3 max-w-[190px]">
               <p className="text-xs font-bold text-foreground leading-snug">
                 Turning Ideas into Digital Solutions
               </p>
             </div>
 
-            <div className="relative h-72 w-72 md:h-80 md:w-80 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
+            <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden ring-4 ring-white shadow-2xl">
               <Image
                 src={profile.photo}
                 alt={profile.name}
                 fill
-                sizes="320px"
-                className="object-cover"
+                sizes="384px"
+                className="object-cover object-left"
                 priority
               />
             </div>
 
-            <div className="absolute bottom-0 right-0 md:-right-6 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
+            <div className="absolute bottom-4 -right-4 md:-right-8 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
               <p className="text-xs font-bold text-foreground/60 mb-3">Technologies I Use</p>
               <div className="grid grid-cols-2 gap-2">
                 {heroTechCard.map((tech, i) => (

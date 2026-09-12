@@ -6,7 +6,7 @@ export const profile = {
   availability: "Available for new projects",
   linkedin: "https://linkedin.com/in/dev-rizwan-akram",
   linkedinLabel: "linkedin.com/in/dev-rizwan-akram",
-  photo: "/profile.png",
+  photo: "/hero-photo.jpg",
 };
 
 export const heroTech = [
