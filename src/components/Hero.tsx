@@ -63,10 +63,10 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute bottom-4 -right-4 md:-right-8 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
+            <div className="absolute bottom-6 -right-2 sm:-right-6 lg:-right-16 xl:-right-24 bg-white rounded-2xl shadow-xl border border-border p-4 w-48 sm:w-52">
               <p className="text-xs font-bold text-foreground/60 mb-3">Technologies I Use</p>
               <div className="grid grid-cols-2 gap-2">
-                {heroTechCard.map((tech, i) => (
+                {heroTechCard.slice(0, 6).map((tech, i) => (
                   <div key={tech.name} className="flex items-center gap-1.5">
                     <span className={`h-6 w-6 shrink-0 rounded-md flex items-center justify-center ${colorAt(i)}`}>
                       <Icon name={tech.icon} className="h-3.5 w-3.5" />
