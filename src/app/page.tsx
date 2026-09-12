@@ -1,11 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Expertise from "@/components/Expertise";
-import Skills from "@/components/Skills";
-import Companies from "@/components/Companies";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
+import Services from "@/components/Services";
+import Solutions from "@/components/Solutions";
+import Projects from "@/components/Projects";
+import TechStack from "@/components/TechStack";
+import WhyWorkWithMe from "@/components/WhyWorkWithMe";
+import HowICanHelp from "@/components/HowICanHelp";
+import Process from "@/components/Process";
 import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -15,12 +18,15 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Expertise />
-        <Skills />
-        <Companies />
-        <Experience />
-        <Education />
+        <Services />
+        <Solutions />
+        <Projects />
+        <TechStack />
+        <WhyWorkWithMe />
+        <HowICanHelp />
+        <Process />
         <About />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

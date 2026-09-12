@@ -2,27 +2,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1e1b4b;
-  --soft: #f4f2ff;
-  --soft-blue: #eef6ff;
-  --primary: #6c5ce7;
-  --primary-dark: #4a3fd6;
-  --accent: #ff9f1c;
-  --accent-dark: #f08c00;
-  --navy: #17153a;
-  --muted: #6b7280;
+  --foreground: #0f172a;
+  --soft: #f5f7ff;
+  --lavender: #f6f4ff;
+  --primary: #4f46e5;
+  --primary-dark: #3d33c9;
+  --border: #e6e8f0;
+  --muted: #64748b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-soft: var(--soft);
-  --color-soft-blue: var(--soft-blue);
+  --color-lavender: var(--lavender);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-navy: var(--navy);
+  --color-border: var(--border);
   --color-muted: var(--muted);
 }
 
@@ -40,20 +36,31 @@ body {
   color: var(--primary);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
-.blob {
-  position: absolute;
-  border-radius: 9999px;
-  background: var(--primary);
-  opacity: 0.12;
-  filter: blur(0px);
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.confetti {
-  position: absolute;
-  color: var(--accent);
-  opacity: 0.8;
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -12px rgba(79, 70, 229, 0.25);
+  border-color: var(--primary);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fade-in-up 0.6s ease both;
 }

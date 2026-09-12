@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Rizwan Akram | Senior Full Stack Developer",
+  title: "Rizwan Akram | Full-Stack Developer & AI Automation Specialist",
   description:
-    "Portfolio of Muhammad Rizwan Akram, a Senior Full Stack Developer specializing in PHP, Laravel, Node.js, React.js, and Vue.js.",
+    "Full-Stack Developer specializing in Laravel, React, Vue, Node.js, CRM systems, AI automation, WhatsApp integrations and custom business solutions.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

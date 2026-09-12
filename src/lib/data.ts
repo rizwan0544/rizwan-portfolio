@@ -1,164 +1,290 @@
 export const profile = {
-  name: "Muhammad Rizwan Akram",
-  title: "Senior Full Stack Developer",
-  tagline: "PHP, Laravel, Node.js | React.js, Vue.js",
+  name: "Rizwan Akram",
+  role: "Full-Stack Developer",
   email: "rizwanakram4321@gmail.com",
-  phone: "+92 307 0430544",
   location: "Lahore, Punjab, Pakistan",
+  availability: "Available for new projects",
   linkedin: "https://linkedin.com/in/dev-rizwan-akram",
   linkedinLabel: "linkedin.com/in/dev-rizwan-akram",
-  summary:
-    "Senior Software Engineer with 7+ years of experience specializing in full-stack web application development. Core expertise in backend architecture using PHP, Laravel, and Node.js, combined with modern frontend frameworks including React.js, Vue.js, Next.js, and Inertia.js. Proven track record in designing scalable RESTful APIs, executing complex third-party integrations, and optimizing relational databases (MySQL). Adept at delivering secure, high-performance web applications, writing clean maintainable code, and enhancing user experience across complex web platforms.",
-  resumeFile: "/Muhammad-Rizwan-Akram-CV.pdf",
   photo: "/profile.png",
 };
 
-export const skillGroups = [
-  {
-    title: "Backend",
-    skills: ["PHP", "Laravel", "Node.js", "Express.js", "OOP", "REST APIs", "WebSockets"],
-  },
-  {
-    title: "Frontend",
-    skills: ["React.js", "Vue.js", "Next.js", "Inertia.js", "Bootstrap", "JQuery"],
-  },
-  {
-    title: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"],
-  },
-  {
-    title: "Integrations & Tools",
-    skills: [
-      "3rd Party Integrations",
-      "WhatsApp Meta Integrations",
-      "SaaS Applications",
-      "GitHub Copilot",
-      "Cursor AI",
-      "Claude AI",
-      "ChatGPT",
-      "Lovable",
-    ],
-  },
+export const heroTech = [
+  "PHP",
+  "Laravel",
+  "React.js",
+  "Vue.js",
+  "Inertia.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MySQL",
+  "MongoDB",
+  "PostgreSQL",
+  "REST APIs",
+  "AI Integrations",
+  "WhatsApp Integrations",
+  "n8n Automation",
 ];
 
-export const topSkills = [
-  { name: "PHP & Laravel", percent: 95 },
-  { name: "React.js & Vue.js", percent: 88 },
-  { name: "Node.js & APIs", percent: 85 },
-  { name: "MySQL & Databases", percent: 90 },
+export const heroTechCard = ["PHP", "Laravel", "React", "Vue", "Node.js", "MySQL", "REST APIs", "AI Automation"];
+
+export const heroHighlights = [
+  { title: "Web Application Development", icon: "code" },
+  { title: "AI Automation", icon: "automation" },
+  { title: "CRM & Business Systems", icon: "crm" },
+  { title: "API Integrations", icon: "plug" },
+  { title: "Ongoing Support", icon: "support" },
 ];
 
-export const expertise = [
+export const services = [
   {
-    title: "Backend Development",
-    description: "Scalable REST APIs and backend architecture using PHP, Laravel, and Node.js/Express.",
-    icon: "server",
+    title: "Custom Web Application Development",
+    description: "Build scalable and secure web applications using Laravel, React, Vue and modern technologies.",
+    icon: "code",
   },
   {
-    title: "Frontend Engineering",
-    description: "Interactive, modern UIs with React.js, Vue.js, Next.js, and Inertia.js.",
-    icon: "layout",
+    title: "CRM & Business Management Systems",
+    description: "Custom CRM systems, dashboards, customer management, workflows, reporting and business operations.",
+    icon: "crm",
   },
   {
-    title: "3rd-Party Integrations",
-    description: "WhatsApp Meta, Google Gemini AI, Stripe, Google Calendar, and Microsoft Graph API.",
+    title: "AI Automation & Integrations",
+    description: "AI-powered workflows, AI assistants, automation, OpenAI/Gemini integrations and intelligent business processes.",
+    icon: "automation",
+  },
+  {
+    title: "WhatsApp Business Automation",
+    description: "WhatsApp API integrations, automated conversations, notifications, lead management and business workflows.",
+    icon: "chat",
+  },
+  {
+    title: "API Development & Integrations",
+    description: "REST APIs, third-party API integrations, payment gateways, external platforms and system-to-system integrations.",
     icon: "plug",
   },
   {
-    title: "Databases & Cloud",
-    description: "MySQL, MongoDB, PostgreSQL, Supabase, and Amazon S3 for high-volume storage.",
-    icon: "database",
+    title: "HRM & Recruitment Systems",
+    description: "Employee management, recruitment workflows, payroll-related systems, attendance, reporting and HR automation.",
+    icon: "users",
+  },
+  {
+    title: "E-commerce Development",
+    description: "Online stores, product management, orders, payments, inventory and custom e-commerce solutions.",
+    icon: "cart",
+  },
+  {
+    title: "Finance & Reporting Systems",
+    description: "Financial dashboards, reporting systems, Excel integrations, business reports and data management.",
+    icon: "chart",
+  },
+  {
+    title: "Dashboard & Admin Panel Development",
+    description: "Custom admin panels, analytics dashboards, role-based access, reports and business management interfaces.",
+    icon: "dashboard",
+  },
+  {
+    title: "Business Process Automation",
+    description: "Automate repetitive business tasks using APIs, n8n, webhooks, AI and custom workflows.",
+    icon: "workflow",
+  },
+  {
+    title: "Third-Party Integrations",
+    description: "Google Calendar, payment systems, social platforms, recruitment platforms, messaging platforms and other external services.",
+    icon: "link",
+  },
+  {
+    title: "Maintenance & Support",
+    description: "Bug fixing, performance improvements, feature development, server/API support and ongoing maintenance.",
+    icon: "wrench",
   },
 ];
 
-export const experience = [
+export const solutions = [
   {
-    company: "14Digital",
-    role: "Team Lead",
-    period: "09/2025 – Present",
-    location: "",
-    points: [
-      "Architected & Scaled Web Applications: Designed, developed, and maintained full-stack enterprise web applications, custom CRM systems, and business management platforms using PHP, Laravel, React.js, and Vue.js.",
-      "AI & Automation Engineering: Integrated Google Gemini AI and automated CV/resume parsing pipelines, streamlining recruitment workflows and reducing manual data extraction time by 40%.",
-      "RESTful API & System Integration: Engineered secure, high-performance RESTful APIs and integrated critical 3rd-party services to automate data flows across external business tools.",
-      "WhatsApp Meta & AI Agent Integration: Integrated official WhatsApp Meta Cloud API with AI-driven conversational workflows, automating customer messaging, response handling, and lead management.",
-      "DevOps, CI/CD & Agile Delivery: Executed deployments using Git, CI/CD workflows, and Agile methodologies, ensuring high-quality releases, zero downtime, and maintainable system documentation.",
-      "Code Quality & Maintenance: Led code reviews, systematic debugging, and unit testing to uphold clean code standards while delivering long-term technical support and feature enhancements.",
-    ],
+    title: "CRM Solutions",
+    problem: "Losing track of leads, customers and follow-ups across spreadsheets and inboxes.",
+    solution: "A custom CRM that centralizes customer data, pipelines and communication in one place.",
   },
   {
-    company: "Friday Media Group",
-    role: "Senior Full Stack Developer",
-    period: "09/2022 – 09/2025",
-    location: "Lahore, Pakistan",
-    points: [
-      "High-Performance Architecture & Cloud Integration: Engineered scalable web applications using Laravel, React.js, and Node.js, incorporating Amazon S3 for secure, high-volume document storage and achieving a 30% improvement in media processing speeds.",
-      "Third-Party & Enterprise API Integrations: Architected bi-directional calendar synchronization with Google Calendar and Microsoft Graph API, alongside secure employee data sync with the HelloFriday HR platform, reducing manual data entry by 50%.",
-      "Real-Time Communication & Interactive UI: Implemented real-time event broadcasting and interactive dashboards using WebSockets, resulting in a 25% increase in user engagement and seamless multi-user collaboration.",
-      "Microsoft Office Add-in Development: Developed a full-stack Microsoft Office Add-in utilizing React.js for the frontend and Node.js for the backend, extending enterprise app functionality directly into Microsoft Office products.",
-      "Auditing, Security & Compliance: Built comprehensive logging, audit trail, and modular permission systems to track application events, ensuring 100% data traceability and compliance with enterprise security standards.",
-      "Performance & UX Optimization: Designed dynamic dashboards and modular UI components, optimizing frontend rendering times and delivering an intuitive user experience for high-traffic environments.",
-    ],
+    title: "HRM & Recruitment",
+    problem: "Manual hiring, attendance and payroll processes that slow your HR team down.",
+    solution: "An HRM platform that automates recruitment, attendance, and workforce reporting.",
   },
   {
-    company: "Tech Plus",
-    role: "Senior Laravel Developer",
-    period: "06/2020 – 09/2022",
-    location: "Lahore, Pakistan",
-    points: [
-      "Full-Stack Application Development: Engineered scalable backend architectures and dynamic frontend interfaces using modern frameworks, resulting in a 25% improvement in application load speed and system responsiveness.",
-      "FinTech & Payment Gateway Integration: Seamlessly integrated Stripe API for secure online payment processing, implementing webhook handlers and error management that processed transactions with 99.9% uptime.",
-      "Feature Development & Module Engineering: Developed complex application modules, including dynamic calendar interfaces and real-time mobile messaging features, enhancing user interaction and engagement by 30%.",
-      "Automated Testing & Code Reliability: Implemented automated unit and integration testing frameworks, increasing test coverage to 80%+ and reducing production bugs and deployment errors by 35%.",
-      "Documentation & Knowledge Sharing: Authored comprehensive technical documentation, API specifications, and workflow guides, streamlining onboarding for new developers and accelerating team collaboration.",
-    ],
+    title: "AI Automation",
+    problem: "Repetitive tasks like CV screening or customer replies eating up your team's time.",
+    solution: "AI-powered workflows that handle parsing, conversations and decisions automatically.",
   },
   {
-    company: "FR-Tech",
-    role: "PHP/Laravel Developer",
-    period: "05/2019 – 05/2020",
-    location: "Lahore, Pakistan",
-    points: [
-      "Cricgenix (Live Sports Streaming & Data Platform): Architected and optimized the Cricgenix web application to fetch, parse, and render real-time sports data and live scores via high-throughput RESTful APIs, maintaining sub-second latency for dynamic user updates.",
-      "Loan Management & FinTech Engine: Developed an enterprise Loan Management System automating loan request workflows, multi-level approvals, complex EMI calculations, and repayment tracking, reducing manual processing time by 40%.",
-      "Financial Data Precision & Security: Engineered automated amortization schedules and ledger tracking algorithms, ensuring 100% accuracy in financial calculations and strict compliance with audit standards.",
-      "API Performance & Data Caching: Implemented server-side caching and optimized API polling strategies for real-time sports feeds, reducing server load by 30% during peak traffic events.",
-    ],
+    title: "Business Dashboards",
+    problem: "Decisions made without clear visibility into operations, sales or finances.",
+    solution: "Real-time dashboards that turn raw data into reports leadership can act on.",
+  },
+  {
+    title: "E-commerce Platforms",
+    problem: "Needing a reliable online store that handles products, payments and inventory.",
+    solution: "A custom e-commerce platform built to your catalogue, pricing and fulfillment needs.",
+  },
+  {
+    title: "Custom Business Software",
+    problem: "Off-the-shelf tools that don't fit how your business actually operates.",
+    solution: "Purpose-built software designed around your exact workflows and requirements.",
   },
 ];
 
-export const education = [
+export const techStack = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "Global Institute",
-    period: "01/2015 – 12/2019",
-    location: "Lahore",
+    category: "Backend",
+    items: ["PHP", "Laravel", "Node.js", "Express.js"],
+  },
+  {
+    category: "Frontend",
+    items: ["React.js", "Vue.js", "Next.js", "Inertia.js", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    category: "Databases",
+    items: ["MySQL", "PostgreSQL", "MongoDB"],
+  },
+  {
+    category: "APIs & Integrations",
+    items: ["REST APIs", "Webhooks", "Third-Party APIs", "Payment APIs", "Google APIs", "WhatsApp APIs"],
+  },
+  {
+    category: "AI & Automation",
+    items: ["AI Integrations", "OpenAI", "Gemini", "n8n", "AI-Powered Workflows", "WhatsApp AI Automation"],
+  },
+  {
+    category: "Other",
+    items: ["WordPress", "Excel Add-ins", "Git", "CI/CD", "AWS / S3"],
   },
 ];
 
-export const achievements = [
+export const projects = [
   {
-    title: "Best Attendance Award",
-    description: "Achieved the Best Attendance award in 2024.",
+    name: "Care360",
+    description: "Care management platform for scheduling, records, and compliance.",
+    stack: ["Laravel", "Vue.js", "REST APIs", "MySQL"],
+    url: "https://care360.14digitalhosting.co.uk/",
+    image: "/projects/care360.png",
   },
   {
-    title: "Employee of the Quarter",
-    description: "Recognized as Employee of the Quarter for outstanding performance.",
+    name: "The Helpers / Cohrtex",
+    description: "Service marketplace platform connecting helpers with clients.",
+    stack: ["Laravel", "React.js", "MySQL", "REST APIs"],
+    url: "https://thehelpers.cohrtex.co.uk/",
+    image: "/projects/cohrtex.png",
+  },
+  {
+    name: "HRM System",
+    description: "HR platform with real-time features and payroll integrations.",
+    stack: ["Laravel", "React.js", "Real-Time", "Payroll"],
+    url: "https://fmg.hellofriday.io/",
+    image: null,
+  },
+  {
+    name: "SuiteReport",
+    description: "AI-powered FP&A reporting platform built for NetSuite, with an Excel Add-in.",
+    stack: ["Laravel", "React.js", "Excel Add-in", "AI"],
+    url: "https://suitereport.ai/",
+    image: "/projects/suitereport.png",
+  },
+  {
+    name: "HolyDays Bay",
+    description: "Travel and booking platform for hotels, ziyarat, taxis, and food.",
+    stack: ["Laravel", "React.js", "MySQL"],
+    url: "https://holydays-bay.vercel.app/search",
+    image: "/projects/holydays.png",
+  },
+  {
+    name: "Workly",
+    description: "Job board and recruitment platform connecting workers with employers.",
+    stack: ["React.js", "Node.js", "REST APIs"],
+    url: "https://workly-find-work-hire-fast.vercel.app/",
+    image: "/projects/workly.png",
+  },
+  {
+    name: "Aurora",
+    description: "Compliance-led HR & care business platform.",
+    stack: ["Laravel", "React.js", "MySQL"],
+    url: "https://aurora.cohrtex.co.uk/",
+    image: "/projects/aurora.png",
+  },
+  {
+    name: "Eastern Packaging",
+    description: "Business website for a custom packaging company with a product catalogue.",
+    stack: ["WordPress", "Elementor"],
+    url: "https://theeasternpackaging.com/",
+    image: "/projects/eastern.png",
   },
 ];
 
-export const languages = [{ name: "English", level: "Advanced" }];
-
-export const interests = [
-  { name: "Cricket", description: "A passionate cricket player who enjoys participating in local matches." },
-  { name: "Snooker", description: "An avid snooker player who enjoys spending leisure time at snooker clubs." },
+export const helpBlocks = [
+  { title: "Build", description: "Custom web applications and business platforms.", icon: "build" },
+  { title: "Automate", description: "AI, WhatsApp, API and workflow automation.", icon: "automation" },
+  { title: "Integrate", description: "Connect existing systems, APIs and third-party services.", icon: "link" },
+  { title: "Improve", description: "Performance, maintenance, new features and ongoing support.", icon: "improve" },
 ];
+
+export const whyWorkWithMe = [
+  {
+    title: "Business-Focused Development",
+    description: "I focus on solving the actual business problem, not just writing code.",
+    icon: "target",
+  },
+  {
+    title: "Scalable Solutions",
+    description: "Applications are designed with maintainability, performance and future growth in mind.",
+    icon: "scale",
+  },
+  {
+    title: "End-to-End Development",
+    description: "Backend, frontend, APIs, databases, integrations and deployment.",
+    icon: "layers",
+  },
+  {
+    title: "Automation First",
+    description: "I look for opportunities to reduce repetitive work through automation and AI.",
+    icon: "automation",
+  },
+];
+
+export const process = [
+  { step: "01", title: "Understand", description: "Understand your business, requirements and goals." },
+  { step: "02", title: "Plan", description: "Define the solution, architecture and development approach." },
+  { step: "03", title: "Build", description: "Develop, integrate, test and refine the product." },
+  { step: "04", title: "Launch & Support", description: "Deploy the solution and provide ongoing improvements and support." },
+];
+
+export const testimonials: { quote: string; name: string; role: string }[] = [];
+
+export const projectTypes = [
+  "Web Application",
+  "CRM System",
+  "AI Automation",
+  "WhatsApp Automation",
+  "API Integration",
+  "E-commerce",
+  "HRM / Recruitment System",
+  "Other",
+];
+
+export const footerTech = ["Laravel", "React", "Vue", "Node.js", "AI Automation"];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#expertise" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
+  { label: "Services", href: "#services" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "Projects", href: "#projects" },
+  { label: "Tech Stack", href: "#tech-stack" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const footerLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];

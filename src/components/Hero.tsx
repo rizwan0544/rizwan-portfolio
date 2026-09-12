@@ -1,72 +1,89 @@
 import Image from "next/image";
-import { profile } from "@/lib/data";
+import Icon from "@/components/Icon";
+import { profile, heroTech, heroTechCard, heroHighlights } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative w-full bg-soft-blue pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden"
-    >
-      <div className="blob -top-16 -left-24 h-72 w-72" />
-      <div className="blob bottom-0 -right-20 h-96 w-96" />
-      <span className="confetti text-3xl top-24 left-10 hidden md:block">✦</span>
-      <span className="confetti text-2xl bottom-16 left-1/3 hidden md:block">●</span>
-      <span className="confetti text-3xl top-1/3 right-[8%] hidden md:block">✦</span>
+    <section id="home" className="relative w-full bg-soft pt-32 pb-20 md:pt-40 md:pb-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <p className="section-eyebrow mb-4">{profile.role}</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-[1.15]">
+              Building Modern Web Solutions &amp; AI-Powered Automations
+            </h1>
+            <p className="mt-6 text-foreground/70 leading-relaxed max-w-xl">
+              I help businesses build scalable web applications, CRM systems, business platforms
+              and AI-powered automations that simplify operations and improve productivity.
+            </p>
 
-      <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center relative">
-        <div>
-          <p className="section-eyebrow mb-3">Hello, I Am</p>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-primary leading-tight">
-            {profile.name}
-          </h1>
-          <h2 className="mt-3 text-xl md:text-2xl font-bold text-navy">{profile.title}</h2>
-          <p className="mt-2 text-muted">{profile.tagline}</p>
-          <p className="mt-5 text-navy/70 max-w-xl leading-relaxed">{profile.summary}</p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {heroTech.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full bg-white border border-border text-foreground/70 text-xs font-medium px-3 py-1.5"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-6">
-            <a
-              href="#contact"
-              className="rounded-full bg-accent px-7 py-3 text-sm font-bold text-white shadow-lg shadow-accent/30 hover:bg-accent-dark transition-colors"
-            >
-              Hire Me
-            </a>
-            <a
-              href="#experience"
-              className="text-sm font-bold text-primary underline underline-offset-4 hover:text-primary-dark"
-            >
-              See My Work
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#projects"
+                className="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="rounded-full border border-border px-7 py-3 text-sm font-bold text-foreground hover:border-primary hover:text-primary transition-colors"
+              >
+                Let&apos;s Talk
+              </a>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center md:justify-end">
+            <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-3xl overflow-hidden bg-white shadow-xl border border-border">
+              <Image
+                src={profile.photo}
+                alt={profile.name}
+                fill
+                sizes="320px"
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            <div className="absolute -bottom-8 md:-bottom-10 bg-white rounded-2xl shadow-xl border border-border p-4 w-56">
+              <p className="text-xs font-bold text-foreground/60 mb-2">Core Stack</p>
+              <div className="flex flex-wrap gap-1.5">
+                {heroTechCard.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-md bg-lavender text-primary text-[11px] font-semibold px-2 py-1"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="relative flex justify-center md:justify-end">
-          <div className="absolute h-64 w-64 md:h-80 md:w-80 rounded-full bg-primary/15" />
-          <div className="relative h-56 w-56 md:h-72 md:w-72 rounded-full ring-4 ring-white shadow-2xl overflow-hidden bg-white">
-            <Image
-              src={profile.photo}
-              alt={profile.name}
-              fill
-              sizes="288px"
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="absolute -left-4 top-4 md:left-0 rounded-2xl bg-white px-4 py-3 shadow-xl flex items-center gap-2">
-            <span className="text-xl">🏆</span>
-            <div>
-              <p className="text-xs font-bold text-navy leading-none">Team Lead</p>
-              <p className="text-[11px] text-muted">14Digital</p>
+        <div className="mt-20 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {heroHighlights.map((item) => (
+            <div
+              key={item.title}
+              className="flex items-center gap-3 rounded-xl bg-white border border-border p-4"
+            >
+              <span className="h-9 w-9 shrink-0 rounded-lg bg-lavender text-primary flex items-center justify-center">
+                <Icon name={item.icon} className="h-5 w-5" />
+              </span>
+              <span className="text-sm font-semibold text-foreground">{item.title}</span>
             </div>
-          </div>
-
-          <div className="absolute -right-2 bottom-6 md:right-0 rounded-2xl bg-white px-4 py-3 shadow-xl flex items-center gap-2">
-            <span className="text-xl">💼</span>
-            <div>
-              <p className="text-xs font-bold text-navy leading-none">7+ Years</p>
-              <p className="text-[11px] text-muted">Experience</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

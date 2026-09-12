@@ -7,18 +7,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <a href="#home" className="text-navy font-extrabold text-lg tracking-tight">
-          Rizwan<span className="text-accent">.</span>
+        <a href="#home" className="text-foreground font-extrabold text-lg tracking-tight">
+          Rizwan Akram
         </a>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-navy/70 hover:text-primary transition-colors"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
@@ -28,13 +28,13 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden md:inline-block rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-accent/30 hover:bg-accent-dark transition-colors"
+          className="hidden lg:inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
         >
-          Contact
+          Let&apos;s Work Together
         </a>
 
         <button
-          className="md:hidden text-navy"
+          className="lg:hidden text-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -45,13 +45,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-black/5 px-6 py-4">
+        <div className="lg:hidden bg-white border-t border-border px-6 py-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-navy/80 hover:text-primary text-sm font-medium"
+                  className="text-foreground/80 hover:text-primary text-sm font-medium"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -61,10 +61,10 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="inline-block rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white"
+                className="inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white"
                 onClick={() => setOpen(false)}
               >
-                Contact
+                Let&apos;s Work Together
               </a>
             </li>
           </ul>
