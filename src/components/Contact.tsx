@@ -5,17 +5,30 @@ import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
 import { profile, projectTypes } from "@/lib/data";
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", projectType: projectTypes[0], message: "" });
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nProject Type: ${form.projectType}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-      "New Project Inquiry"
-    )}&body=${body}`;
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      setForm({ name: "", email: "", projectType: projectTypes[0], message: "" });
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -102,10 +115,26 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="sm:col-span-2 rounded-full bg-primary px-7 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors justify-self-start"
+              disabled={status === "sending"}
+              className="sm:col-span-2 rounded-full bg-primary px-7 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors justify-self-start disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
+
+            {status === "success" && (
+              <p className="sm:col-span-2 text-sm text-primary font-semibold">
+                Thanks! Your message has been sent — I&apos;ll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="sm:col-span-2 text-sm text-red-600 font-semibold">
+                Something went wrong. Please try again or email me directly at{" "}
+                <a href={`mailto:${profile.email}`} className="underline">
+                  {profile.email}
+                </a>
+                .
+              </p>
+            )}
           </form>
         </div>
       </div>
