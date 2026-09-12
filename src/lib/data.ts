@@ -7,6 +7,7 @@ export const profile = {
   linkedin: "https://linkedin.com/in/dev-rizwan-akram",
   linkedinLabel: "linkedin.com/in/dev-rizwan-akram",
   photo: "/hero-photo.jpg",
+  tagline: "Building reliable full-stack products and AI-driven automations for startups and teams worldwide.",
 };
 
 export const heroTech = [
@@ -297,45 +298,6 @@ export const testimonials = [
       "AI automation cut our response time from hours to minutes. Rizwan understood the business problem, not just the code.",
     name: "Sample Client",
     role: "Product Manager, SaaS Startup",
-  },
-];
-
-export const pricingPlans = [
-  {
-    name: "Starter",
-    price: "$800+",
-    period: "per project",
-    description: "Small websites, landing pages and single-feature builds.",
-    features: ["Responsive website or feature build", "Up to 2 revision rounds", "Basic API integration", "2 weeks support after launch"],
-    highlighted: false,
-  },
-  {
-    name: "Growth",
-    price: "$2,500+",
-    period: "per project",
-    description: "Full web apps, CRMs and multi-feature business platforms.",
-    features: [
-      "Custom web application or CRM",
-      "API & third-party integrations",
-      "AI or WhatsApp automation",
-      "Admin dashboard & reporting",
-      "30 days support after launch",
-    ],
-    highlighted: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "scoped to needs",
-    description: "Large platforms, ongoing development and long-term partnerships.",
-    features: [
-      "End-to-end product development",
-      "Dedicated ongoing support",
-      "Complex automations & integrations",
-      "Scalable architecture & performance tuning",
-      "Priority turnaround",
-    ],
-    highlighted: false,
   },
 ];
 
